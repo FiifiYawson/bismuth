@@ -1,0 +1,151 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: proxima nova;
+    src: url(../fonts/Proxima\ Nova\ Font.otf);
+}
+
+@font-face {
+    font-family: raleway;
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: fraunces;
+    src: url(../fonts/Fraunces_9pt-Regular.ttf);
+}
+
+:root {
+    --brand-color: #cc2020;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: raleway;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.section {
+    margin: 150px 0;
+    padding: 0 10vw;
+}
+
+.head-text {
+    font-family: proxima nova;
+}
+
+.section-head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.section-head span {
+    min-width: fit-content;
+}
+
+.section-head-design-right,
+.section-head-design-left {
+    background-color: var(--brand-color);
+    opacity: 60%;
+    height: 0.1pc;
+    width: 140px;
+    position: relative;
+}
+
+.section-head-design-left::before,
+.section-head-design-right::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    background-color: var(--brand-color);
+    transform: translateY(-50%) rotateZ(45deg);
+}
+
+.section-head-design-right::after {
+    right: 0;
+}
+
+.section-head-2 {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 48px;
+}
+
+.section-head-2::after {
+    content: "";
+    display: block;
+    width: 143px;
+    height: 3px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--brand-color);
+}
+
+.flex-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    justify-content: space-between;
+}
+
+.flex-section .main-head {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 72px;
+}
+
+.flex-section-image {
+    width: clamp(200px, 50%, 600px)
+}
+
+.flex-section .section-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flex-section .read-more-button {
+    width: 120px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-nav {
+    border: 1px var(--brand-color) solid;
+    color: var(--brand-color);
+    border-radius: 4px;
+}
+
+@media(max-width: 1100px) {
+    .flex-section {
+        flex-direction: column;
+    }
+    /* .flex-section .section-text {
+        align-items: center;
+        text-align: center;
+    } */
+    .flex-section-image {
+        width: 100%;
+        max-width: 400px;
+    }
+}
