@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="images/image 10.svg" type="image/x-icon">
     <link rel="stylesheet" href="styles/pre-defined.css">
     <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/index.js" defer></script>
     <title>Bismuth</title>
 </head>
 
@@ -41,7 +42,7 @@
                 Start a Project
             </a>
         </nav>
-        <video src="images/image 15.png"></video>
+        <video poster="images/image 15.png" controls id="video"></video>
     </section>
     <section class="section flex-section" id="who-we-are-section">
         <div class="section-text">
@@ -69,64 +70,72 @@
         </p>
         <nav id="menu">
             <div id="menu-navs">
-                <span>Services</span>
-                <span>Technologies</span>
-                <span>Industry</span>
+                <span class="menu-option" id="active-menu">Services</span>
+                <span class="menu-option">Technologies</span>
+                <span class="menu-option">Industry</span>
             </div>
             <div id="menu-style">
                 <div id="menu-nav-underline"></div>
             </div>
         </nav>
     </section>
-    <div id="menu-display">
-        <div class="menu-display-card">
-            <img class="menu-card-image" src="images/Frame 8472.svg">
-            <h5 class="menu-card-head">Mobile App Development</h5>
-            <p class="menu-card-text">
-                Create an impactful mobile app that fits your brand and industry within a shorter time frame
-            </p>
-            <a href="#" class="menu-card-read-more">Read More</a>
+    <div id="menus">
+        <div id="services-menu" class="menu-display">
+            <div class="menu-display-card">
+                <img class="menu-card-image" src="images/Frame 8472.svg">
+                <h5 class="menu-card-head">Mobile App Development</h5>
+                <p class="menu-card-text">
+                    Create an impactful mobile app that fits your brand and industry within a shorter time frame
+                </p>
+                <a href="#" class="menu-card-read-more">Read More</a>
+            </div>
+            <div class="menu-display-card">
+                <img class="menu-card-image" src="images/Group.svg">
+                <h5 class="menu-card-head">UI/UX Design</h5>
+                <p class="menu-card-text">
+                    Build the product you need for your brand with experienced team that understands design process.
+                </p>
+                <a href="#" class="menu-card-read-more">Read More</a>
+            </div>
+            <div class="menu-display-card">
+                <img class="menu-card-image" src="images/material-symbols_laptop-mac-outline.svg">
+                <h5 class="menu-card-head">B2B Software Development</h5>
+                <p class="menu-card-text">
+                    Create complex enterprise software, ensure reliable software integration, modernise your legacy system.
+                </p>
+                <a href="#" class="menu-card-read-more">Read More</a>
+            </div>
+            <div class="menu-display-card">
+                <img class="menu-card-image" src="images/bi_card-checklist.svg">
+                <h5 class="menu-card-head">Q&A Testing</h5>
+                <p class="menu-card-text">
+                    Trust our top minds to eliminate workflow pain points, implement new tech, and consolidate app portfolios.
+                </p>
+                <a href="#" class="menu-card-read-more">Read More</a>
+            </div>
+            <div class="menu-display-card">
+                <img class="menu-card-image" src="images/Vector (3).svg">
+                <h5 class="menu-card-head">Dedicated Development Team</h5>
+                <p class="menu-card-text">
+                    Hire dedicated software development team with niche skills and deep expertise in product building.
+                </p>
+                <a href="#" class="menu-card-read-more">Read More</a>
+            </div>
+            <div class="menu-display-card">
+                <img class="menu-card-image" src="images/Vector (4).svg">
+                <h5 class="menu-card-head">IT Consulting</h5>
+                <p class="menu-card-text">
+                    Trust our experts to deliver comprehensive, multi-stage testing and auditing of your software.
+                </p>
+                <a href="#" class="menu-card-read-more">Read More</a>
+            </div>
         </div>
-        <div class="menu-display-card">
-            <img class="menu-card-image" src="images/Group.svg">
-            <h5 class="menu-card-head">UI/UX Design</h5>
-            <p class="menu-card-text">
-                Build the product you need for your brand with experienced team that understands design process.
-            </p>
-            <a href="#" class="menu-card-read-more">Read More</a>
+        <!-- <div id="technologies-menu" class="menu-display">
+
         </div>
-        <div class="menu-display-card">
-            <img class="menu-card-image" src="images/material-symbols_laptop-mac-outline.svg">
-            <h5 class="menu-card-head">B2B Software Development</h5>
-            <p class="menu-card-text">
-                Create complex enterprise software, ensure reliable software integration, modernise your legacy system.
-            </p>
-            <a href="#" class="menu-card-read-more">Read More</a>
-        </div>
-        <div class="menu-display-card">
-            <img class="menu-card-image" src="images/bi_card-checklist.svg">
-            <h5 class="menu-card-head">Q&A Testing</h5>
-            <p class="menu-card-text">
-                Trust our top minds to eliminate workflow pain points, implement new tech, and consolidate app portfolios.
-            </p>
-            <a href="#" class="menu-card-read-more">Read More</a>
-        </div>
-        <div class="menu-display-card">
-            <img class="menu-card-image" src="images/Vector (3).svg">
-            <h5 class="menu-card-head">Dedicated Development Team</h5>
-            <p class="menu-card-text">
-                Hire dedicated software development team with niche skills and deep expertise in product building.
-            </p>
-            <a href="#" class="menu-card-read-more">Read More</a>
-        </div>
-        <div class="menu-display-card">
-            <img class="menu-card-image" src="images/Vector (4).svg">
-            <h5 class="menu-card-head">IT Consulting</h5>
-            <p class="menu-card-text">
-                Trust our experts to deliver comprehensive, multi-stage testing and auditing of your software.
-            </p>
-            <a href="#" class="menu-card-read-more">Read More</a>
-        </div>
+        <div id="industry-menu" class="menu-display">
+
+        </div> -->
     </div>
     <section class="section" id="our-products-section">
         <h1 class="section-head-2 head-text">Our Products</h1>
@@ -215,6 +224,9 @@
         <div id="questions-block">
             <div class="faqs">
                 <div class="question">How many services does your company provide?</div>
+                <div class="answer">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore tenetur dolore culpa iure nemo nihil doloremque aspernatur quidem assumenda facere.
+                </div>
             </div>
             <div class="faqs">
                 <div class="question">Can I reach out to the company from my location?</div>
@@ -224,12 +236,21 @@
             </div>
             <div class="faqs">
                 <div class="question">Do you work for startups?</div>
+                <div class="answer">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore tenetur dolore culpa iure nemo nihil doloremque aspernatur quidem assumenda facere.
+                </div>
             </div>
             <div class="faqs">
                 <div class="question">Can I hire a capable hands for my project?</div>
+                <div class="answer">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore tenetur dolore culpa iure nemo nihil doloremque aspernatur quidem assumenda facere.
+                </div>
             </div>
             <div class="faqs">
                 <div class="question">Are you available for a new project?</div>
+                <div class="answer">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore tenetur dolore culpa iure nemo nihil doloremque aspernatur quidem assumenda facere.
+                </div>
             </div>
         </div>
     </section>
