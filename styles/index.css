@@ -53,6 +53,8 @@ header a:hover {
 #top-section nav {
     display: flex;
     gap: 42px;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 #project-button,
